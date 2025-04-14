@@ -4,6 +4,7 @@ import { ArrowRight, BarChart3, Building2, Calendar, Mail, Phone, Users, Setting
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { ImageCarousel } from "@/components/image-carousel"
+import { ContactForm } from "@/components/contact-form"
 
 export default function Home() {
   return (
@@ -59,7 +60,7 @@ export default function Home() {
                     className="gap-1 bg-gradient-to-r from-slate-800 to-slate-700 hover:from-slate-700 hover:to-slate-600"
                     asChild
                   >
-                    <Link href="http://calendly.com/felipegattas">
+                    <Link href="http://calendly.com/felipegattas" target="_blank" rel="noopener noreferrer">
                       Agendar una consulta <ArrowRight className="h-4 w-4" />
                     </Link>
                   </Button>
@@ -388,81 +389,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="space-y-4 bg-white p-6 rounded-xl shadow-md border border-slate-200">
-                <div className="space-y-2">
-                  <h3 className="text-xl font-bold">Envíame un mensaje</h3>
-                  <p className="text-sm text-slate-500">
-                    Completa el formulario y me pondré en contacto contigo lo antes posible.
-                  </p>
-                </div>
-                <form action="mailto:felipegatt@gmail.com" method="post" encType="text/plain" className="space-y-4">
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="space-y-2">
-                      <label
-                        className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                        htmlFor="nombre"
-                      >
-                        Nombre
-                      </label>
-                      <input
-                        className="flex h-10 w-full rounded-md border border-slate-200 bg-white px-3 py-2 text-sm ring-offset-white file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-slate-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-400 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                        id="nombre"
-                        name="nombre"
-                        placeholder="Tu nombre"
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <label
-                        className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                        htmlFor="email"
-                      >
-                        Email
-                      </label>
-                      <input
-                        className="flex h-10 w-full rounded-md border border-slate-200 bg-white px-3 py-2 text-sm ring-offset-white file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-slate-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-400 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                        id="email"
-                        name="email"
-                        placeholder="tu@email.com"
-                        type="email"
-                      />
-                    </div>
-                  </div>
-                  <div className="space-y-2">
-                    <label
-                      className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                      htmlFor="empresa"
-                    >
-                      Empresa
-                    </label>
-                    <input
-                      className="flex h-10 w-full rounded-md border border-slate-200 bg-white px-3 py-2 text-sm ring-offset-white file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-slate-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-400 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                      id="empresa"
-                      name="empresa"
-                      placeholder="Nombre de tu empresa"
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <label
-                      className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                      htmlFor="mensaje"
-                    >
-                      Mensaje
-                    </label>
-                    <textarea
-                      className="flex min-h-[100px] w-full rounded-md border border-slate-200 bg-white px-3 py-2 text-sm ring-offset-white placeholder:text-slate-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-400 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                      id="mensaje"
-                      name="mensaje"
-                      placeholder="¿Cómo puedo ayudarte?"
-                    />
-                  </div>
-                  <Button
-                    className="w-full bg-gradient-to-r from-slate-800 to-slate-700 hover:from-slate-700 hover:to-slate-600"
-                    type="submit"
-                  >
-                    Enviar mensaje
-                  </Button>
-                </form>
-              </div>
+              <ContactForm />
             </div>
           </div>
         </section>
