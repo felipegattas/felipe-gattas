@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import { ArrowRight, BarChart3, Building2, Calendar, Mail, Phone, Users, Settings } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
@@ -11,7 +12,9 @@ export default function Home() {
     <div className="flex flex-col min-h-screen">
       <header className="px-4 lg:px-6 h-16 flex items-center border-b bg-white/80 backdrop-blur-sm sticky top-0 z-50">
         <Link className="flex items-center justify-center" href="#">
-          <Building2 className="h-6 w-6 mr-2" />
+          <div className="relative h-8 w-8 mr-2">
+            <Image src="/images/fg-logo.png" alt="FG Logo" fill className="object-contain" priority />
+          </div>
           <span className="font-bold">Felipe Gattas</span>
         </Link>
         <nav className="ml-auto flex gap-4 sm:gap-6">

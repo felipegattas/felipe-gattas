@@ -9,6 +9,10 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata = {
   title: "Felipe Gattas - Consultoría Empresarial Estratégica",
   description: "Servicios de consultoría empresarial para optimizar operaciones y aumentar rentabilidad",
+  icons: {
+    icon: "/images/fg-logo.png",
+    apple: "/images/fg-logo.png",
+  },
     generator: 'v0.dev'
 }
 
@@ -19,6 +23,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
+      <head>
+        <link rel="icon" href="/images/fg-logo.png" />
+      </head>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
           {children}
